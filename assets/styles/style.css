@@ -119,12 +119,16 @@ header img{
 }
 
 .footer{
-    background-color: #595e5e;
+    background-color: #bbc1c1;
     text-align: center;
     padding: 1.5rem;
     font-size: 1.5rem;
     font-weight: 400;
     margin-top: 16rem;
+}
+
+.img__insta{
+  cursor: pointer;
 }
 
 
@@ -282,7 +286,7 @@ header img{
     width: 38px;
     height: 35px;
     justify-content: space-between;
-    background-color: #595e5e;
+    background-color: #8b8e8e;
     border-radius: 8px 8px 8px;
     padding: 8px;
     animation-delay: 5s;
