@@ -16,10 +16,11 @@ html{
 }
 body{
     font-family: var(--inter-font);
-    background-image: url(/assets/styles/robotb1.jpg);
+    background-image: url(/robotb1.jpg);
     background-size:cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 header{
     margin-bottom: 5rem;
