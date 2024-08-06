@@ -1,0 +1,393 @@
+:root{
+    --color-primario:#000000;
+    --color-secundario:#0b090a;
+    --color-terciario:#d9e7f3;
+    --color-cuaternario:#000000;
+    --color-borde:#ffffff;
+    --color-hover:#cbc6c6;
+    --color-boton1:rgb(243, 222, 60);
+    --color-letra: #000000;
+    --color-boton2:#ffffff;
+    --color-letra2:#000000;
+    --inter-font: "Inter", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: var(--inter-font);
+    background-image: url(/assets/styles/robotb1.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header{
+    margin-bottom: 5rem;
+    width: 60%;
+}
+main{
+display: flex;
+justify-content: space-around;
+}
+header img{
+    width: 120px;
+    height: 48px;
+}
+.form__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+}
+/*caja de texto a ingresar*/
+.form__input{ 
+    width: 100%;
+    max-width: 577px;
+    height: 64dvh;
+    border: 1px solid var(--color-borde);
+    box-sizing: border-box;
+    box-shadow: 1px 7px 30px -8px var(--color-cuaternario);
+    border-radius: 18px;
+    background: transparent;
+    outline: none;
+    font-family: var(--inter-font);
+    font-size: 3.2rem;   
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+/*cambia color ingrese texto*/
+::placeholder{
+    color: var(--color-primario); 
+}
+.alert__msj{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.submit__container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+/*btn encriptar*/
+.form__btn{
+    background: var(--color-boton1);
+    color: var(--color-letra);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--color-boton1);
+}
+.form__btn:hover{
+    background-color:var(--color-hover) ;
+}
+/*btn desencriptar*/
+.form__btn--secundary{
+    background: transparent;
+    color: var(--color-letra2);
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 2px solid var(--color-boton1);
+}
+/*fondo caja encriptada*/
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 77dvh;
+    border-radius: 32px;
+    max-width: 40rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-borde);
+    box-sizing: border-box;
+    box-shadow: 1px 12px 32px -8px var(--color-cuaternario);
+}
+.hidden{
+    display: none;
+}
+
+.footer{
+    background-color: #595e5e;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 16rem;
+}
+
+
+@media screen and (max-width:768px) {
+    main{
+        flex-direction: column;
+    }
+    .submit__container{
+        justify-content: center;
+    }
+
+    .form__input{
+        margin: auto;
+        margin-block-end: 2rem;
+    }
+    .result{
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 186px;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    .loader{
+        margin-top: 1rem;
+    }
+    header img {
+        width: 73px;
+    }
+    .loader__bat{
+        display: none;
+    }
+}
+
+/*Loaders*/
+
+/*loader love x robot*/ 
+.loader {
+    display: flex;
+    position: relative;
+    justify-items: center;
+    align-items:end;
+    gap: 1rem;
+    height: 55px;
+    width: 200px;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    position: relative;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    transform-origin: center;
+    animation-delay: 2s;
+  }
+  /*container robot*/
+  .loader .container:nth-child(3) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 4s infinite ease-in-out;
+    animation-delay: 3s;
+  }
+  /*container x*/
+  .loader .container:nth-child(2) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 4s infinite ease-in-out;
+    animation-delay: 3s;
+  }
+  /*container heart*/
+  .loader .container:nth-child(1) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 3s infinite ease-in-out;
+    animation-delay: 3s;
+  }
+  
+  .love {
+    background: #000000;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 8px;
+    margin: 0.8rem 4px;
+    transform: rotate(45deg);
+    animation-delay: 2s;
+  }
+  
+  .love::before, .love::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000000;
+  }
+  
+  .love::before {
+    left: -16px;
+  }
+  
+  .love::after {
+    top: -16px;
+  }
+  
+  .death {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    animation: rotation 3s infinite ease-in-out;
+    animation-delay: 1s;
+  }
+  
+  .death:after {
+    content: '';
+    height: 63px;
+    position: absolute;
+    border-left: 12px solid rgb(4, 4, 4);
+    transform: rotate(45deg);
+    border-radius: 8px;
+    top: -4px;
+  }
+  
+  .death:before {
+    content: '';
+    height: 60px;
+    position: absolute;
+    border-left: 12px solid rgb(243, 222, 60);
+    transform: rotate(-45deg);
+  }
+  
+  .loader:hover {
+    animation: none;
+  }
+  
+  .robots {
+    display: flex;
+    width: 38px;
+    height: 35px;
+    justify-content: space-between;
+    background-color: #595e5e;
+    border-radius: 8px 8px 8px;
+    padding: 8px;
+    animation-delay: 5s;
+  }
+  
+  .robots::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+    background-color: #01fdff;
+    border-radius: 50%;
+    animation-delay: 2s;
+    animation: blink 0.5s 2 forwards;
+  }
+  
+  .robots::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+    background-color: #01fdff;
+    border-radius: 50%;
+    animation-delay: 2s;
+    animation: blink 0.5s 2 forwards;
+  }
+  
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  
+    30% {
+      transform: translateY(-150%);
+      filter: blur(10px);
+    }
+  
+    60% {
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  
+    30% {
+      transform: translateY(150%);
+      filter: blur(10px);
+    }
+  
+    60% {
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes rotation {
+    20%, 100% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      height: 0;
+    }
+  
+    20% {
+      height: 12px;
+    }
+  
+    100% {
+      height: 12px;
+    }
+  }
+
+
+
+/*Imagen de batman*/
+/* HTML: <div class="loader"></div> */ 
+.loader__bat {
+    width: 100px;
+    height: 45px;
+    position: relative;
+  }
+  .loader__bat:before,
+  .loader__bat:after {
+    content: "";
+    color: rgb(243, 222, 60);
+    position: absolute;
+    inset: 0;
+    background: rgb(243, 222, 60);    
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(-50px -20px,10% -12px,20% 0,calc(50% - 15px) 0,calc(50% - 10px) -20px,calc(50% - 8px) -15px,calc(50% + 8px) -15px,calc(50% + 10px) -20px,calc(50% + 15px) 0,80% 0,90% -12px,calc(100% + 50px) -20px,100% 80%,calc(100% + 10px) calc(100% + 10px),60% 100%,50% calc(100% + 15px),40% 100%,-10px calc(100% + 10px),0 80%);
+  }
+  .loader__bat:after {
+    animation: l9 1s infinite;
+    transform: perspective(300px) translateZ(0px)
+  }
+  @keyframes l9 {
+    to {transform:perspective(300px) translateZ(100px);opacity:0}
+  }

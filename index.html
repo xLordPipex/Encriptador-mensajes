@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="icon" href="./assets/img/candadoNpng.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/svg/Logo.png" alt="Logo alura">
+    </header>
+    <main>
+        <form class="form__section">
+            <textarea class="form__input" name="mensaje" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea> 
+            <div class="btn__container">
+                <div class="alert__msj"><img src="./assets/svg/Exclamacion.png" alt="alert icon"><span>Solo letras 
+                    minúsculas y sin acentos</span></div>               
+                </div>
+            <div class="submit__container">
+                    <input class="form__btn" type="submit" value="Encriptar">
+                    <input class="form__btn form__btn--secundary" type="submit" value="Desencriptar">
+            </div>
+        </form>      
+        <aside class="result">
+            <div class="loader">
+                <div class="container">
+                  <div class="carousel">
+                    <div class="love"></div>
+                    <div class="love"></div>
+                    <div class="love"></div>
+                    <div class="love"></div>
+                    <div class="love"></div>
+                    <div class="love"></div>
+                    <div class="love"></div>
+                  </div> 
+                </div>
+                <div class="container">
+                  <div class="carousel">
+                    <div class="death"></div>
+                    <div class="death"></div>
+                    <div class="death"></div>
+                    <div class="death"></div>
+                    <div class="death"></div>
+                    <div class="death"></div>
+                    <div class="death"></div>
+                  </div> 
+                </div>
+                <div class="container">
+                  <div class="carousel">
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                      <div class="robots"></div>
+                  </div> 
+                </div>
+            </div>
+            <div class="loader__bat hidden"></div>
+            <div class="result__container">
+                <h3 class="result__title">Ningun mensaje fue encontrado</h3>
+                <p class="result__text">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <button class="result__btn form__btn form__btn--secundary hidden">Copiar</button>
+            </div>
+    
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>© Diseñado por Juan Felipe Lopez</p>
+        <div class="presentacion__enlaces">
+            <script>
+                function redirect() {
+                    window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+                }
+            </script>
+            <a class="enlaces" onclick="redirect()"> <img src="./assets/img/instagram.png"></a>
+            <a class="enlaces" href="https://github.com/"> <img src="./assets/img/github.png"></a>
+            <a class="enlaces" href="https://www.linkedin.com/"> <img src="./assets/img/linkedin.png"></a>
+        </div>
+    
+    </footer>
+     <script src="./encriptador.js"></script>
+</body>
+
+</html>
