@@ -16,7 +16,7 @@ html{
 }
 body{
     font-family: var(--inter-font);
-    background-image: url(/robotb1.jpg);
+    background-image: url(/assets/img/robotb1.jpg);
     background-size:cover;
     background-position: center center;
     background-repeat: no-repeat;
